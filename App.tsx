@@ -3,16 +3,15 @@ import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 
 import { AppLoading } from "expo";
 
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen";
-
 import * as Font from "expo-font";
-import FontDemoScreen from "./screens/FontDemoScreen";
-import LayoutDemoScreen from "./screens/LayoutDemoScreen";
-import ButtonsDemoScreen from "./screens/ButtonsDemoScreen";
-import TestDatePickerScreen from "./screens/TestDatePickerScreen";
+import FontDemoScreen from "./screens/archived/FontDemoScreen";
+import LayoutDemoScreen from "./screens/archived/LayoutDemoScreen";
+import ButtonsDemoScreen from "./screens/archived/ButtonsDemoScreen";
+import TestDatePickerScreen from "./screens/archived/TestDatePickerScreen";
+import TestTextInputScreen from "./screens/archived/TestTextInputScreen";
+import BookingListingScreen from "./screens/BookingListingScreen";
+import DeviceInfoScreen from "./screens/DeviceInfoScreen";
+import TestPageView from "./screens/TestPageView";
 
 export default class App extends Component<any, any> {
   state = { isAppLoaded: false };
@@ -49,8 +48,6 @@ export default class App extends Component<any, any> {
   };
 
   startAsync = async () => {
-    console.log("start");
-
     await this.loadFonts();
   };
 
@@ -67,17 +64,14 @@ export default class App extends Component<any, any> {
       // return <TestResponsiveFontView />;
       // return <FontDemoScreen />;
       // return <LayoutDemoScreen />;
-      return <ButtonsDemoScreen />;
+      // return <ButtonsDemoScreen />;
       // return <TestDatePickerScreen />;
+      // return <TestTextInputScreen />;
+      // return <TestLayoutScreen />;
+      // return <TestFakerScreen />;
+      // return <BookingListingScreen />;
+      return <DeviceInfoScreen />;
+      // return <TestPageView />;
     }
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});

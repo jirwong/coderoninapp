@@ -1,11 +1,35 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "lib": ["es6"],
     "moduleResolution": "node",
     "noEmit": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true
-  }
+    "strict": false,
+    "target": "esnext",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+//      "@constants/*": ["constants/*"],
+//      "@components/*": ["components/*"],
+//      "@firebase/*": ["firebase/*"],
+//      "@interfaces/*": ["interfaces/*"],
+//      "@navigation/*": ["navigation/*"],
+//      "@static/*": ["static/*"],
+//      "@stores/*": ["stores/*"],
+//      "@screens/*": ["screens/*"],
+//      "@services/*": ["services/*"],
+//      "@style/*": ["style/*"],
+//      "@styles/*": ["styles/*"],
+//      "@utils/*": ["utils/*"]
+    }
+  },
+  "exclude": ["node_modules"]
 }
